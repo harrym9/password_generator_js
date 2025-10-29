@@ -32,18 +32,23 @@ body {
 #generate-btn {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-::placeholder {
-  color: #5def92;
-}
-
-#generate-btn {
   background-color: #10b981;
   border: none;
   padding: 10px;
   border-radius: 5px;
   color: white;
+}
+
+#generate-btn:hover {
+  background-color: #273549;
+}
+
+#generate-btn:active {
+  background-color: #10b981;
+}
+
+::placeholder {
+  color: #5def92;
 }
 
 input {
