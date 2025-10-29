@@ -1,0 +1,23 @@
+body {
+  background-color: #1c1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #ecfdf5;
+}
+
+#title-text {
+  font-family: Karla, sans-serif;
+  font-weight: bold;
+}
+
+#random-text {
+  color: #5def92;
+}
+
+#hint-text {
+  color: #6b7280;
+}
