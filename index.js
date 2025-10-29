@@ -92,9 +92,11 @@ const characters = [
   "/",
 ];
 
+// DOM for displaying passwords
 let firstPasswordDisplay = document.getElementById("password-display-one");
 let secondPasswordDisplay = document.getElementById("password-display-two");
 
+// Password Randomizer
 function generate_password() {
   let generatedFirstPass = "";
   let generatedSecondPass = "";
@@ -110,5 +112,45 @@ function generate_password() {
   secondPasswordDisplay.placeholder = generatedSecondPass;
 }
 
+//Generate Passwords button
 let generatePasswordsButton = document.getElementById("generate-btn");
 generatePasswordsButton.addEventListener("click", generate_password);
+
+// Copy to Click feature
+firstPasswordDisplay.addEventListener("click", copy_first_generated_password);
+secondPasswordDisplay.addEventListener("click", copy_second_generated_password);
+let textToCopy = "";
+
+function copy_first_generated_password() {
+  let textToCopy = firstPasswordDisplay.placeholder;
+  if (!textToCopy) {
+    error_toast.classList.add("show");
+    setTimeout(() => {
+      error_toast.classList.remove("show");
+    }, 2000);
+  } else {
+    console.log(textToCopy);
+    navigator.clipboard.writeText(textToCopy);
+    toast.classList.add("show");
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 2000);
+  }
+}
+
+function copy_second_generated_password() {
+  let textToCopy = secondPasswordDisplay.placeholder;
+  if (!textToCopy) {
+    error_toast.classList.add("show");
+    setTimeout(() => {
+      error_toast.classList.remove("show");
+    }, 2000);
+  } else {
+    console.log(textToCopy);
+    navigator.clipboard.writeText(textToCopy);
+    toast.classList.add("show");
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 2000);
+  }
+}

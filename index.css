@@ -56,6 +56,15 @@ input {
   text-align: center;
   border: none;
   border-radius: 5px;
+  color: #273549;
+}
+input:hover {
+  background-color: #10b981;
+  color: #273549;
+}
+
+input:active {
+  background-color: #273549;
 }
 
 #placeholders {
@@ -68,5 +77,61 @@ input {
 
 #copy-hint {
   text-align: center;
+  font-weight: 100;
   color: #6b7280;
+}
+
+/* The "pop out" toast box */
+#toast {
+  visibility: hidden; /* Hidden by default */
+  opacity: 0;
+  font-family: Karla, sans-serif;
+  min-width: 250px; /* Set a default minimum width */
+  background-color: #28a745; /* Green "success" background */
+  color: #fff; /* White text */
+  text-align: center; /* Centered text */
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px; /* Some padding */
+  position: fixed; /* Stay in one place */
+  z-index: 1000; /* Sit on top of all other content */
+  left: 50%; /* Center it horizontally */
+  bottom: 30px; /* 30px from the bottom */
+
+  /* This moves it 50% of its own width to the left, perfectly centering it */
+  transform: translateX(-50%);
+
+  /* This makes the fade-in and fade-out animation smooth */
+  transition: opacity 0.5s ease;
+}
+
+#error_toast {
+  visibility: hidden;
+  opacity: 0;
+
+  font-family: Karla, sans-serif;
+  min-width: 250px;
+  background-color: #28a745;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  bottom: 30px;
+
+  transform: translateX(-50%);
+
+  transition: opacity 0.5s ease;
+}
+
+/* This class will be added by JavaScript to show the toast */
+#toast.show {
+  visibility: visible; /* Show the element */
+  opacity: 1; /* Make it fully visible */
+}
+
+#error_toast.show {
+  visibility: visible; /* Show the element */
+  opacity: 1; /* Make it fully visible */
 }
