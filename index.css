@@ -3,15 +3,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0px;
 }
 
 .container {
   background-color: #ecfdf5;
+  font-family: Karla, sans-serif;
+  height: 400px;
+  width: 400px;
+  border-radius: 5px;
+  padding: 30px;
 }
 
 #title-text {
-  font-family: Karla, sans-serif;
   font-weight: bold;
+  margin-top: 100px;
 }
 
 #random-text {
@@ -20,4 +26,5 @@ body {
 
 #hint-text {
   color: #6b7280;
+  font-weight: 100;
 }
