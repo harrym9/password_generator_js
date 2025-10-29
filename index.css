@@ -9,15 +9,15 @@ body {
 .container {
   background-color: #ecfdf5;
   font-family: Karla, sans-serif;
-  height: 400px;
-  width: 400px;
   border-radius: 5px;
   padding: 30px;
+  width: 350px;
+  height: 385px;
 }
 
 #title-text {
   font-weight: bold;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #random-text {
@@ -27,4 +27,41 @@ body {
 #hint-text {
   color: #6b7280;
   font-weight: 100;
+}
+
+#generate-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+::placeholder {
+  color: #5def92;
+}
+
+#generate-btn {
+  background-color: #10b981;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+input {
+  background-color: #273549;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}
+
+#placeholders {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+  height: 30px;
+  gap: 65px;
+}
+
+#copy-hint {
+  text-align: center;
+  color: #6b7280;
 }

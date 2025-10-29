@@ -11,12 +11,23 @@
         Generate a <br /><span id="random-text">random password</span>
       </h1>
       <p id="hint-text">Never use insecure password again</p>
-      <button id="generate-btn">Generate password</button>
+      <button id="generate-btn">Generate passwords</button>
       <hr />
-      <div>
-        <input type="text" id="password-display-one" readonly placeholder="" />
-        <input type="text" id="password-display-two" readonly placeholder="" />
+      <div id="placeholders">
+        <input
+          type="text"
+          id="password-display-one"
+          readonly
+          placeholder="1234567890123"
+        />
+        <input
+          type="text"
+          id="password-display-two"
+          readonly
+          placeholder="1234567890123"
+        />
       </div>
+      <p id="copy-hint">Click one of them for copying</p>
     </div>
     <script src="index.js"></script>
   </body>
